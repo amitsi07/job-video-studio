@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: job-video-studio
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATA_DIR
+        value: /tmp/job-video-data
